@@ -24,10 +24,10 @@ RSpec.configure do |config|
       paths: {},
       servers: [
         {
-          url: 'https://{defaultHost}',
+          url: 'https://www.softwaremedico.com',
           variables: {
             defaultHost: {
-              default: 'www.example.com'
+              default: 'www.softwaremedico.com'
             }
           }
         }

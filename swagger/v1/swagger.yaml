@@ -1,7 +1,7 @@
 ---
 openapi: 3.0.1
 info:
-  title: API V1
+  title: API IMC V1
   version: v1
 paths:
   "/imcs":
@@ -27,7 +27,7 @@ paths:
               - height
               - weight
 servers:
-- url: https://{defaultHost}
+- url: https://www.softwaremedico.com
   variables:
     defaultHost:
-      default: www.example.com
+      default: www.softwaremedico.com
