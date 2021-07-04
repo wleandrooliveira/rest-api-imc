@@ -1,2 +1,2 @@
-class Imc < ApplicationRecord
+class Imc
 end
