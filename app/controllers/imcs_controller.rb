@@ -3,15 +3,14 @@ class ImcsController < ApplicationController
 
   # POST /imcs
   def create
-    @imc = Imc.new(imc_params)
+    @weight = Float(imc_params[:weight])
+    @height = Float(imc_params[:height])
 
-    if @imc.save
-      render json: @imc, status: :created, location: @imc
-    else
-      render json: @imc.errors, status: :unprocessable_entity
-    end
-  end
-.destroy
+    @imc = Imc.new(@height,@weight)
+    @result = Result.new(@imc)
+    @result.result
+
+    render json: @result
   end
 
   private
