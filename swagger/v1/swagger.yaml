@@ -1,0 +1,33 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/imcs":
+    post:
+      summary: Creates a pet
+      tags:
+      - Imcs
+      parameters: []
+      responses:
+        '201':
+          description: imc calculado
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                height:
+                  type: float
+                weight:
+                  type: float
+              required:
+              - height
+              - weight
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
