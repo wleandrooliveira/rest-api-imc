@@ -30,7 +30,6 @@ $ rails s -p 3001
 ### 4) Acessando o swagger da API
 
 - https://localhost:3001/swagger/index.html
-* ...
 
 ### 5) Testando a API no Postman 
 
