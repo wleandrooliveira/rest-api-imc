@@ -15,12 +15,20 @@ class Result
             @obesity = 'Paciente com peso Normal'
           elsif((@imc.imc > 24.9) && (@imc.imc < 30))
             @imc = @imc.imc
-            @classification = 'peso em excesso'
-            @obesity = 'peso em excesso'
-          elsif((@imc.imc > 30) && (@imc.imc == 30))
+            @classification = 'Levemente acima do peso'
+            @obesity = 'Alerta para obesidade'
+          elsif((@imc.imc > 30) && (@imc.imc < 35))
             @imc = @imc.imc
-            @classification = 'peso em excesso'
-            @obesity = 'obesidade'
+            @classification = 'Paciente Obeso'
+            @obesity = 'Obesidade grau I'
+          elsif((@imc.imc > 35) && (@imc.imc < 40))
+            @imc = @imc.imc
+            @classification = 'Paciente Obeso'
+            @obesity = 'Obesidade grau II'
+          elsif((@imc.imc > 40))
+            @imc = @imc.imc
+            @classification = 'Paciente Obeso'
+            @obesity = 'Obesidade grau III(mórbida)'
         end
     end
 end
